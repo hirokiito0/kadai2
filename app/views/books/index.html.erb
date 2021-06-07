@@ -10,13 +10,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>リーダブルコード</td>
-        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
-        <td><%= link_to "show","/books#show" %></td>
-        <td><%= link_to "Edit","/books#edit" %></td>
-        <td><%= link_to "Destroy","/books#index" %></td>
-      </tr>
       <% @books.each do |book| %>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
