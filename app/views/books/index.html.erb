@@ -1,0 +1,33 @@
+<body>
+  <p id="notice"></p>
+  <h1>Books</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colsoan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>リーダブルコード</td>
+        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+        <td><a>show</a></td>
+        <td><a>Edit</a></td>
+        <td><a>Destroy</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>New book</h2>
+  <%= form_with model:@book, local:true do |f| %>
+    <div>
+      <label>Title</label>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <label>Body</label>
+      <%= f.text_field :body %>
+    </div>
+    <div><%= f.submit 'Create Book' %></div>
+</body>
