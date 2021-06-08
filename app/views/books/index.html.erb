@@ -1,5 +1,9 @@
 <body>
-  <p id="notice"></p>
+  <% if flash[:notice] %>
+  <div class="alert alert-primary" role="alert">
+    <%= notice %>
+  </div>
+  <% end %>
   <h1>Books</h1>
   <table>
     <thead>
